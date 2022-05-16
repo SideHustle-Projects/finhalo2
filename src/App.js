@@ -1,13 +1,15 @@
-import './App.css';
-import Clients from './Componenets/Clients/Clients';
-import Login from './Componenets/Login/Login';
+import "./App.css";
+import Clients from "./components/Clients/Clients";
+import { LandingPage } from "./components/LandingPage";
+import Login from "./components/Login/Login";
 
 function App() {
   return (
     <div className="App">
-      <h1>FinHalo</h1>
+      <LandingPage />
+      {/* <h1>FinHalo</h1> */}
       {/* <Login/> */}
-      <Clients/>
+      {/* <Clients/> */}
     </div>
   );
 }
