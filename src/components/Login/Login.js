@@ -29,11 +29,12 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignIn() {
-  const handleSubmit = (event) => {
+    const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get('email'),
+      name: data.get('name'),
       password: data.get('password'),
     });
   };
@@ -44,7 +45,7 @@ export default function SignIn() {
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: 6,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -59,7 +60,7 @@ export default function SignIn() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            Sign In
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
@@ -70,6 +71,16 @@ export default function SignIn() {
               label="Email Address"
               name="email"
               autoComplete="email"
+              autoFocus
+            />
+          <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="name"
+              label="Username"
+              name="name"
+              autoComplete="name"
               autoFocus
             />
             <TextField
@@ -86,7 +97,7 @@ export default function SignIn() {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
-            <Button
+            <Button 
               type="submit"
               fullWidth
               variant="contained"
@@ -108,7 +119,7 @@ export default function SignIn() {
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }} />
+        <Copyright sx={{ mt: 2, mb: 2 }} />
       </Container>
     </ThemeProvider>
   );
