@@ -9,7 +9,7 @@ function App() {
       {/* <h1>Finhalo</h1> */}
       <Login />
       {/* <Card/> */}
-      <p>Hello world</p>
+      <p>Hello world</p> <p>Hello world</p>
     </div>
   );
 }
