@@ -42,6 +42,7 @@ export const Navbar = ({ title }) => {
               size="large"
               aria-label="show 17 new notifications"
               color="secondary"
+              href="/services"
             >
               <Badge badgeContent={17} color="error">
                 <NotificationsIcon />
@@ -51,9 +52,8 @@ export const Navbar = ({ title }) => {
               size="large"
               edge="end"
               aria-label="account of current user"
-              // aria-controls={menuId}
               aria-haspopup="true"
-              // onClick={handleProfileMenuOpen}
+              href="clients"
               color="secondary"
             >
               <AccountCircle />
