@@ -1,25 +1,29 @@
 import React, { useEffect, useState } from 'react'
 import Grid from '@mui/material/Grid'
-import { Container, Paper } from '@mui/material'
+import { Container, Paper, Typography } from '@mui/material'
+import CardDetails from './CardDetails'
 
 export default function Card() {
- const [clients, setClients] = useState([])
+const [clients, setClients] = useState([])
 
- useEffect(() => {
-  fetch('https://fakerapi.it/api/v1/companies?_quantity=20')
+const url = 'http://localhost:8000/clients'
+
+useEffect(() => {
+  fetch(url)
   .then(res => res.json())
   .then (data => setClients(data))
- }, [])
+}, [])
 
   return (
     <Container>
-     <Grid container>
+      <Typography component="h1" variant = "h2"  sx={{ color: 'secondary.main'}} align="center" fontWeight={500}>Clients</Typography>
+    <Grid container spacing={3} mb={1}>
       {clients.map(client => (
-       <Grid item key={client.id} xs ={12} md={6} ig={4}>
-        <Paper>{client.title}</Paper>
-       </Grid>
+      <Grid item key={client.id} xs ={12} sm={6} md={4} lg={4}>
+        <CardDetails client={client}/>
+      </Grid>
       ))}
-     </Grid>
+    </Grid>
     </Container>
   )
 }
