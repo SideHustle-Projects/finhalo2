@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login/Login";
 import Card from "./components/Clients/Card";
-import Landing from "./components/Dashboard/Landing";
+import { Landing } from "./components/Landing";
 import { Services } from "./components/services/Services";
 
 function App() {
