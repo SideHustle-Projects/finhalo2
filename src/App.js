@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       
       <BrowserRouter>
-      {/* <Navbar/> */}
         <Routes>
         <Route path='/' element = {<Landing />}></Route>
         <Route path='/login' element = {<Login />}></Route>

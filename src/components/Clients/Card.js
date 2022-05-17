@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Grid from '@mui/material/Grid'
-import { Container, Paper, Typography } from '@mui/material'
+import { Container, Typography } from '@mui/material'
 import CardDetails from './CardDetails'
 
 export default function Card() {
