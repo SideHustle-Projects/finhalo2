@@ -52,10 +52,8 @@ export const Navbar = ({ title }) => {
               size="large"
               edge="end"
               aria-label="account of current user"
-              // aria-controls={menuId}
               aria-haspopup="true"
               href="clients"
-              // onClick={handleProfileMenuOpen}
               color="secondary"
             >
               <AccountCircle />
