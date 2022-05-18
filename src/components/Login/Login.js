@@ -34,8 +34,10 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignIn() {
+  
   const handleSubmit = (event) => {
     event.preventDefault();
+    window.location="/dashboard"
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get("email"),
@@ -112,7 +114,7 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2, bgcolor: "secondary.main" }}
-              href="/dashboard"
+              
             >
               Sign In
             </Button>

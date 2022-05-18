@@ -4,27 +4,29 @@ import Grid from '@mui/material/Grid'
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {ServiceTitle,ServiceText,} from "./Clients.styled";
+import { Box } from '@mui/material';
 
 export const Clients = () => {
   const [clients, setClients] = useState([]);
   useEffect(() => {
-    fetch("https://fakerapi.it/api/v1/companies?_quantity=1")
+    fetch("https://fakerapi.it/api/v1/companies?_quantity=12")
       .then((response) => response.json())
       .then((data) => setClients(data.data));
   }, []);
 
    return (
     <div>
-     <Typography component="h1" variant = "h2"  sx={{ color: 'secondary.main'}} align="center" fontWeight={500}>Clients</Typography>
-<Grid container spacing={3} mb={1} xs ={12} sm={6} md={4} lg={4}>
-     {clients
+      <Typography component="h1" variant = "h2"  sx={{ color: 'secondary.main'}} align="center" fontWeight={500}>Clients</Typography>
+      <Box sx={{p:5}}>
+    <Grid container spacing={3} justifyContent="space-around" alignItems="center" direction="row">
+      {clients
           ? clients.map((client, i) => (
-           <Grid item key={client.id} xs ={4} sm={8} md={12} lg={24}>
-              <Card  key={i} sx={{maxWidth:345}} container spacing={3} mb={1}>
+           <Grid item key={client.id} xs={12} sm={6} lg={4} sx={{mb:4}}>
+              <Card key={i}>
                 <CardMedia component="img"
-         alt="client image"
-         height="140"
-         image={client.image} />
+          alt="client image"
+          height="140"
+          image={client.image} />
                 <ServiceTitle>{client.name}</ServiceTitle>
                 <ServiceText
                   style={{
@@ -34,14 +36,15 @@ export const Clients = () => {
                 >
                   Email: {client.email} <br />
                   Phone Number: {client.phone} <br />
-                  Gender: {client.gender}
+                  Gender: {client.contact.gender} 
                 </ServiceText>
-                <ServiceText>{client.birthday}</ServiceText>
+                <ServiceText>{client.contact.birthday}</ServiceText>
               </Card>
-   </Grid>
+            </Grid>
             ))
           : null}
           </Grid>
+    </Box>
     </div>
    );
 };

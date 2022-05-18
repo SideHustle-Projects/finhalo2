@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid'
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {ServiceTitle,ServiceText,} from "./Team.styled";
+import { Box } from '@mui/material';
 
 export const Team = () => {
   const [team, setTeam] = useState([]);
@@ -16,11 +17,12 @@ export const Team = () => {
    return (
     <div>
      <Typography component="h1" variant = "h2"  sx={{ color: 'secondary.main'}} align="center" fontWeight={500}>Team Members</Typography>
-<Grid container spacing={3} mb={1} xs ={12} sm={6} md={4} lg={4}>
+     <Box sx={{p:5}}>
+<Grid container spacing={3} justifyContent="space-around" alignItems="center" direction="row">
      {team
           ? team.map((team, i) => (
-           <Grid item key={team.id} xs ={4} sm={8} md={12} lg={24}>
-              <Card  key={i} sx={{maxWidth:345}} container spacing={3} mb={1}>
+           <Grid item key={team.id} xs={12} sm={6} lg={4} sx={{mb:4}}>
+              <Card  key={i} >
                 <CardMedia component="img"
          alt="team member"
          height="140"
@@ -42,6 +44,7 @@ export const Team = () => {
             ))
           : null}
           </Grid>
+          </Box>
     </div>
    );
 };

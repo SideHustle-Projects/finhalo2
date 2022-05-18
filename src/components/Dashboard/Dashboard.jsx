@@ -9,7 +9,9 @@ export const Dashboard = () => {
   return (
     <div>
       <Navbar title="dashboard" />
+      <h3>Welcome to Finhalo, Prudence</h3>
       <Grid container spacing={3}>
+        
         <Grid item xs={12} lg={8}>
           <LineChart />
           <Transactions />
