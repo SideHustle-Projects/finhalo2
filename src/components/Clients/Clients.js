@@ -19,13 +19,13 @@ export const Clients = () => {
 <Grid container spacing={3} mb={1} xs ={12} sm={6} md={4} lg={4}>
      {clients
           ? clients.map((client, i) => (
-           <Grid item key={client.id} xs ={24} sm={12} md={8} lg={4}>
+           <Grid item key={client.id} xs ={4} sm={8} md={12} lg={24}>
               <Card  key={i} sx={{maxWidth:345}} container spacing={3} mb={1}>
                 <CardMedia component="img"
          alt="client image"
          height="140"
          image={client.image} />
-                <ServiceTitle>{client.firstname + " " + client.lastname}</ServiceTitle>
+                <ServiceTitle>{client.name}</ServiceTitle>
                 <ServiceText
                   style={{
                     color: "#333",

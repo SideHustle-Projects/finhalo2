@@ -19,7 +19,7 @@ export const Team = () => {
 <Grid container spacing={3} mb={1} xs ={12} sm={6} md={4} lg={4}>
      {team
           ? team.map((team, i) => (
-           <Grid item key={team.id} xs ={24} sm={12} md={8} lg={4}>
+           <Grid item key={team.id} xs ={4} sm={8} md={12} lg={24}>
               <Card  key={i} sx={{maxWidth:345}} container spacing={3} mb={1}>
                 <CardMedia component="img"
          alt="team member"

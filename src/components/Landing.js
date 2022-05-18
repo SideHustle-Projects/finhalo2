@@ -34,8 +34,8 @@ export const Landing = () => {
               Login
             </Button>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <img src="images/Daco_510624.png" alt="" />
+          <Grid item xs={240} sm={6}>
+            <img src="images/Daco_510624.png" alt="" width='100%' />
           </Grid>
         </Grid>
       </Container>
