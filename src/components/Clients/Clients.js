@@ -8,7 +8,7 @@ import {ServiceTitle,ServiceText,} from "./Clients.styled";
 export const Clients = () => {
   const [clients, setClients] = useState([]);
   useEffect(() => {
-    fetch("https://fakerapi.it/api/v1/persons?_quantity=24&_gender=male&_birthday_start=2005-01-01")
+    fetch("https://fakerapi.it/api/v1/companies?_quantity=1")
       .then((response) => response.json())
       .then((data) => setClients(data.data));
   }, []);

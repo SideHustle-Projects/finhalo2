@@ -5,6 +5,7 @@ import { Landing } from "./components/Landing";
 import { Dashboard } from "./components/Dashboard/Dashboard";
 import { Services } from "./components/services/Services";
 import { Clients } from "./components/Clients/Clients";
+import { Team } from "./components/Team Members/Team";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/clients" element={<Clients />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/team-members" element={<Team />} />
         </Routes>
       </BrowserRouter>
     </div>
