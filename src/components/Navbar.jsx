@@ -33,6 +33,7 @@ export const Navbar = ({ title }) => {
               size="large"
               aria-label="show 4 new mails"
               color="secondary"
+              href="/clients"
             >
               <Badge badgeContent={4} color="error">
                 <MailIcon />
@@ -53,7 +54,7 @@ export const Navbar = ({ title }) => {
               edge="end"
               aria-label="account of current user"
               aria-haspopup="true"
-              href="clients"
+              href="/login"
               color="secondary"
             >
               <AccountCircle />
