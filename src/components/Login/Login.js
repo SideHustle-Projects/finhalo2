@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useState} from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -34,6 +34,13 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignIn() {
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  
+  // const handleSubmit = (event) =>{
+  //   event.preventDefault();
+  // }
   
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -44,7 +51,10 @@ export default function SignIn() {
       name: data.get("name"),
       password: data.get("password"),
     });
+    sessionStorage.setItem('data',(data.get("name")));
   };
+
+  const [btnDisabled, setBtnDisabled] = useState(true)
 
   return (
     <ThemeProvider theme={theme}>
@@ -75,8 +85,9 @@ export default function SignIn() {
             noValidate
             sx={{ mt: 1 }}
           >
-            <TextField
+            <TextField 
               margin="normal"
+              type="email"
               required
               fullWidth
               id="email"
@@ -85,7 +96,7 @@ export default function SignIn() {
               autoComplete="email"
               autoFocus
             />
-            <TextField
+            <TextField 
               margin="normal"
               required
               fullWidth
@@ -95,7 +106,7 @@ export default function SignIn() {
               autoComplete="name"
               autoFocus
             />
-            <TextField
+            <TextField onChange={(text) => setBtnDisabled(!text.target.value)}
               margin="normal"
               required
               fullWidth
@@ -109,18 +120,16 @@ export default function SignIn() {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
-            <Button
+            <Button disabled={btnDisabled}
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2, bgcolor: "secondary.main" }}
-              
-            >
+              sx={{ mt: 3, mb: 2, bgcolor: "secondary.main" }}>
               Sign In
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link href="/login" variant="body2">
                   Forgot password?
                 </Link>
               </Grid>
@@ -137,3 +146,16 @@ export default function SignIn() {
     </ThemeProvider>
   );
 }
+
+// export default function TextFieldAndButton (props) {
+  
+
+//   return (
+//     <div>
+//         <TextField
+          
+//         />
+//         <Button >OK</Button>
+//     <div/>
+//   )
+// }

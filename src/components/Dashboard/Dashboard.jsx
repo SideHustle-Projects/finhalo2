@@ -6,12 +6,12 @@ import { Transactions } from "./Transactions";
 import { Cards } from "./Cards";
 
 export const Dashboard = () => {
+  let data = sessionStorage.getItem('data');
   return (
     <div>
       <Navbar title="dashboard" />
-      <h3>Welcome to Finhalo, Prudence</h3>
+      <h3>Welcome to Finhalo,{sessionStorage.getItem('data')}</h3>
       <Grid container spacing={3}>
-        
         <Grid item xs={12} lg={8}>
           <LineChart />
           <Transactions />
