@@ -4,7 +4,7 @@ import { Container, Typography } from '@mui/material'
 import CardDetails from './CardDetails'
 
 export default function Card() {
-const [clients, setClients] = useState([])
+const [clients, setClients] = useState([]);
 
 const url = 'http://localhost:8000/clients'
 
