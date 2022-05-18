@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {ServiceTitle,ServiceText,} from "./Clients.styled";
 
-export const Clients = ({}) => {
+export const Clients = () => {
   const [clients, setClients] = useState([]);
   useEffect(() => {
     fetch("https://fakerapi.it/api/v1/persons?_quantity=24&_gender=male&_birthday_start=2005-01-01")
