@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Line } from "react-chartjs-2";
-import { Chart as ChartJs } from "chart.js/auto";
+import Chart from "chart.js/auto";
 
 export const LineChart = () => {
-  const [userData, setUserData] = useState({
+  const t = true;
+  const state = {
     labels: ["Jan", "Feb", "Mar", "April", "May", "June", "July"],
     datasets: [
       {
@@ -16,12 +17,14 @@ export const LineChart = () => {
         data: [65, 59, 80, 81, 56, 100, 70],
       },
     ],
-  });
+  };
 
-  return (
+  return !t ? (
+    { Chart }
+  ) : (
     <div>
       <Line
-        data={userData}
+        data={state}
         options={{
           title: {
             display: true,
