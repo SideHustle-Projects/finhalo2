@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Navbar } from "../Navbar";
+import Footer from "../Footer/Footer";
 import {
   Title,
   TitleSmall,
@@ -60,6 +62,7 @@ export const Services = () => {
   ];
   return (
     <div>
+      <Navbar title="dashboard" />
       <Title>Services</Title>
       <TitleSmall>We offer the following services:</TitleSmall>
       <TextContainer>
@@ -104,6 +107,7 @@ export const Services = () => {
             ))
           : null}
       </ServicesContainer>
+      <Footer/>
     </div>
   );
 };

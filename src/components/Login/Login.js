@@ -11,7 +11,6 @@ import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 function Copyright(props) {
   return (
@@ -31,17 +30,8 @@ function Copyright(props) {
   );
 }
 
-const theme = createTheme();
 
 export default function SignIn() {
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  
-  // const handleSubmit = (event) =>{
-  //   event.preventDefault();
-  // }
-  
   const handleSubmit = (event) => {
     event.preventDefault();
     window.location="/dashboard"
@@ -57,7 +47,6 @@ export default function SignIn() {
   const [btnDisabled, setBtnDisabled] = useState(true)
 
   return (
-    <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -143,19 +132,5 @@ export default function SignIn() {
         </Box>
         <Copyright sx={{ mt: 2, mb: 2 }} />
       </Container>
-    </ThemeProvider>
   );
 }
-
-// export default function TextFieldAndButton (props) {
-  
-
-//   return (
-//     <div>
-//         <TextField
-          
-//         />
-//         <Button >OK</Button>
-//     <div/>
-//   )
-// }

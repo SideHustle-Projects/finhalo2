@@ -1,6 +1,25 @@
 import { Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import { Navbar } from "./Navbar";
+import Link from "@mui/material/Link";
+
+function Copyright(props) {
+  return (
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
+      {"Copyright © "}
+      <Link color="inherit" href="/">
+        Finhalo
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
+}
 
 export const Landing = () => {
   return (
@@ -38,6 +57,7 @@ export const Landing = () => {
             <img src="images/Daco_510624.png" alt="" width='100%' />
           </Grid>
         </Grid>
+        <Copyright sx={{ mt: 2, mb: 2 }} />
       </Container>
     </div>
   );

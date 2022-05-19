@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-  color: #9b59b6;
+  color: #6A0DAD;
   margin-bottom: 20px;
   margin-left: 20px;
+  margin-top: 0px;
   text-align: center;
+  font-size: 3.5rem;
 `;
 export const TitleSmall = styled.h2`
   color: #9b59b6;
@@ -29,7 +31,7 @@ export const ServicesContainer = styled.div`
   border-radius: 20px;
   align-items: center;
   justify-content: center;
-
+  margin-bottom: 10px
   @media (max-width: 1012px) {
     grid-template-columns: repeat(2, 1fr);
   }

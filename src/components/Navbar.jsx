@@ -8,73 +8,49 @@ import {
   Typography,
 } from "@mui/material";
 
-import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import MoreIcon from "@mui/icons-material/MoreVert";
-import React from "react";
+import React, {useState, useEffect} from "react";
+import NotificationsNoneSharp from "@mui/icons-material/NotificationsNoneSharp";
 
 export const Navbar = ({ title }) => {
+  const [name, setName] = useState("")
+  useEffect(() => {
+    let data = sessionStorage.getItem('data');
+    setName(data)  
+}, [])
   return title === "dashboard" ? (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="inherit" elevation={0}>
-        <Toolbar>
-          <Typography
-            variant="h4"
-            color="secondary"
-            component="div"
-            sx={{ flexGrow: 1 }}
+< AppBar position="static" sx={{zIndex: 1}}>
+          <Toolbar
+            sx={{
+              backgroundColor:"white",
+              pr: '24px' // keep right padding when drawer closed
+            }}
           >
-            Dashboard
-          </Typography>
-
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="secondary"
-              href="/clients"
+            
+            <Typography
+              component="h1"
+              variant="h6"
+              color="secondary.main"
+              noWrap
+              sx={{ flexGrow: 1 }}
             >
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
+              <h3>Welcome to Finhalo, {name}</h3>
+            </Typography>
+            <IconButton
+            size="large"
+            color="secondary"
+            >
+            <Badge badgeContent={4} color="warning">
+              <MailIcon />
+            </Badge>
+          </IconButton>
+            <IconButton size="large" color="secondary">
+              <Badge badgeContent={4} color="warning">
+                <NotificationsNoneSharp />
               </Badge>
             </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="secondary"
-              href="/services"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-haspopup="true"
-              href="/login"
-              color="secondary"
-            >
-              <AccountCircle />
-            </IconButton>
-          </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              // aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              // onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
-    </Box>
+          </Toolbar>
+        </AppBar>
   ) : (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="inherit">
@@ -83,7 +59,7 @@ export const Navbar = ({ title }) => {
             variant="h4"
             color="secondary"
             component="div"
-            sx={{ flexGrow: 1 }}
+            sx={{ flexGrow: 1, fontWeight:800 }}
           >
             Finhalo
           </Typography>

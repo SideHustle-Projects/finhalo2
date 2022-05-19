@@ -5,6 +5,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {ServiceTitle,ServiceText,} from "./Team.styled";
 import { Box } from '@mui/material';
+import { Navbar } from "../Navbar";
+import Footer from "../Footer/Footer";
 
 export const Team = () => {
   const [team, setTeam] = useState([]);
@@ -16,7 +18,8 @@ export const Team = () => {
 
    return (
     <div>
-     <Typography component="h1" variant = "h2"  sx={{ color: 'secondary.main'}} align="center" fontWeight={500}>Team Members</Typography>
+      <Navbar title="dashboard" />
+     <Typography component="h1" variant = "h2"  sx={{ color: 'secondary.main'}} align="center" fontWeight={800} fontFamily='Poppins'>Team Members</Typography>
      <Box sx={{p:5}}>
 <Grid container spacing={3} justifyContent="space-around" alignItems="center" direction="row">
      {team
@@ -45,6 +48,7 @@ export const Team = () => {
           : null}
           </Grid>
           </Box>
+          <Footer/>
     </div>
    );
 };
