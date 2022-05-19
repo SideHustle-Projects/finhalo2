@@ -1,11 +1,9 @@
 import { Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import { Navbar } from "./Navbar";
 
 export const Landing = () => {
   return (
     <div>
-      <Navbar />
       <Container sx={{ mt: 10 }}>
         <Grid
           container
@@ -35,7 +33,7 @@ export const Landing = () => {
             </Button>
           </Grid>
           <Grid item xs={240} sm={6}>
-            <img src="images/Daco_510624.png" alt="" width='100%' />
+            <img src="images/Daco_510624.png" alt="" width="100%" />
           </Grid>
         </Grid>
       </Container>

@@ -33,7 +33,11 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function SignIn() {
+export default function SignIn({ auth, setAuth }) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setAuth(true);
+    window.location = "/dashboard";
   // const [name, setName] = useState("");
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
@@ -42,9 +46,7 @@ export default function SignIn() {
   //   event.preventDefault();
   // }
   
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    window.location="/dashboard"
+
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get("email"),
@@ -124,7 +126,8 @@ export default function SignIn() {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2, bgcolor: "secondary.main" }}>
+              sx={{ mt: 3, mb: 2, bgcolor: "secondary.main" }}
+            >
               Sign In
             </Button>
             <Grid container>
