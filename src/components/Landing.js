@@ -1,6 +1,7 @@
 import { Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import Link from "@mui/material/Link";
+import { Navbar } from "./Navbar";
 
 function Copyright(props) {
   return (
@@ -23,6 +24,7 @@ function Copyright(props) {
 export const Landing = () => {
   return (
     <div>
+      <Navbar />
       <Container sx={{ mt: 10 }}>
         <Grid
           container
