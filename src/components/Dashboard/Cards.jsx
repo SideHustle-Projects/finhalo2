@@ -10,9 +10,9 @@ export const Cards = () => {
 }, [])
 
   return (
-    <Box sx={{ mb: 20 }}>
-      <Box sx={{ display: "flex",
-                alignItems:"center"
+    <Box sx={{ display: "flex",
+                alignItems:"center", mb: 20 }}>
+      <Box sx={{ 
                 }}>
         
       </Box>
