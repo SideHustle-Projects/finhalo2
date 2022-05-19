@@ -1,7 +1,8 @@
 import { LineChart } from "./ChartBox";
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useState, useEffect } from "react";
 import { Transactions } from "./Transactions";
 import { Cards } from "./Cards";
 
