@@ -1,16 +1,23 @@
 import { LineChart } from "./ChartBox";
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
+import React, { useState, useEffect } from "react";
 import { Transactions } from "./Transactions";
 import { Cards } from "./Cards";
 
 export const Dashboard = () => {
-  return (
+  const [name, setName] = useState("")
+  useEffect(() => {
+    let data = sessionStorage.getItem('data');
+    setName(data)  
+  }, [])
+  
+    return (
     <div>
       <Box sx={{ p: 3 }}>
         <Typography variant="h5" sx={{ fontWeight: 700, my: 3 }}>
           {" "}
-          Welcome to Finhalo, Prudence
+          Welcome to Finhalo, {name}
         </Typography>
         <Grid
           container
@@ -28,6 +35,8 @@ export const Dashboard = () => {
           <Grid item xs={12} sm={5} lg={4}>
             <Cards />
           </Grid>
+
+
         </Grid>
       </Box>
     </div>
