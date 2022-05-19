@@ -11,7 +11,9 @@ export const Cards = () => {
 
   return (
     <Box sx={{ mb: 20 }}>
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: "flex",
+                alignItems:"center"
+                }}>
         
       </Box>
       <Box>

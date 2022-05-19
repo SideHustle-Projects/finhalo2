@@ -113,7 +113,8 @@ export default function SignIn() {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2, bgcolor: "secondary.main" }}>
+              sx={{ mt: 3, mb: 2, bgcolor: "secondary.main" }}
+            >
               Sign In
             </Button>
             <Grid container>
