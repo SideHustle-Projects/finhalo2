@@ -1,6 +1,5 @@
 import { Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import { Navbar } from "./Navbar";
 import Link from "@mui/material/Link";
 
 function Copyright(props) {

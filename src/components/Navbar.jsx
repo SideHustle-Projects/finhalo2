@@ -87,24 +87,18 @@ import {
   Typography,
 } from "@mui/material";
 import React, {useState, useEffect} from "react";
-import MenuIcon from "@mui/icons-material/Menu";
 import { styled } from "@mui/material/styles";
 import NotificationsNoneSharp from "@mui/icons-material/NotificationsNoneSharp";
-import Avatar from "@mui/material/Avatar";
-import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import MuiAppBar from "@mui/material/AppBar";
 import MailIcon from "@mui/icons-material/Mail";
-// import { useSelector } from "react-redux";
-import MoreIcon from "@mui/icons-material/MoreVert";
-
 const drawerWidth = 240;
 
-const StyledBadge = styled(Badge)(({ theme }) => ({
-  "& .MuiBadge-badge": {
-    right: 2,
-    top: 4,
-  },
-}));
+// const StyledBadge = styled(Badge)(({ theme }) => ({
+//   "& .MuiBadge-badge": {
+//     right: 2,
+//     top: 4,
+//   },
+// }));
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -131,12 +125,12 @@ export const Navbar = ({ setAuth, open, setOpen }) => {
     setName(data)  
 }, [])
   // const { user } = useSelector((state) => state.authReducer);
-  const { user } = "useSelector((state) => state.authReducer)";
+  // const { user } = "useSelector((state) => state.authReducer)";
   const ch = window.location.pathname;
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+  // const handleDrawerOpen = () => {
+  //   setOpen(true);
+  // };
   return ch !== "/" && ch !== "/login" ? (
     <div>
 < AppBar position="static" sx={{zIndex: 1}}>
