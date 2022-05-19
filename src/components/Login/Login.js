@@ -33,17 +33,11 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function SignIn() {
-  
+export default function SignIn({ auth, setAuth }) {
   const handleSubmit = (event) => {
     event.preventDefault();
-    window.location="/dashboard"
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      name: data.get("name"),
-      password: data.get("password"),
-    });
+    setAuth(true);
+    window.location = "/dashboard";
   };
 
   return (
@@ -114,7 +108,6 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2, bgcolor: "secondary.main" }}
-              
             >
               Sign In
             </Button>

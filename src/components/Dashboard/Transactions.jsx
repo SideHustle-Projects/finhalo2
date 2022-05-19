@@ -10,6 +10,8 @@ import {
   Paper,
   TableCell,
   TableRow,
+  Typography,
+  Box,
 } from "@mui/material";
 
 const transactions = [
@@ -45,17 +47,19 @@ const transactions = [
 
 export const Transactions = () => {
   return (
-    <div>
-      Transactions
+    <Box sx={{ my: 7 }}>
+      <Typography variant="h4" sx={{ mb: 3 }}>
+        Transactions
+      </Typography>
       <TableContainer component={Paper}>
         <Table>
           <TableBody>
             {transactions.map((t) => (
               <TableRow key={t.id}>
                 <TableCell scope="row">{t.icon}</TableCell>
-                <TableCell style={{ width: 160 }}>{t.title}</TableCell>
-                <TableCell style={{ width: 200 }}>{t.deal}</TableCell>
-                <TableCell style={{ width: 160 }} align="right">
+                <TableCell align="left">{t.title}</TableCell>
+                <TableCell style={{ width: 160 }}>{t.deal}</TableCell>
+                <TableCell style={{ width: 100 }} align="right">
                   {t.price}
                 </TableCell>
               </TableRow>
@@ -63,6 +67,6 @@ export const Transactions = () => {
           </TableBody>
         </Table>
       </TableContainer>
-    </div>
+    </Box>
   );
 };

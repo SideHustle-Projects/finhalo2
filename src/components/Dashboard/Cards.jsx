@@ -4,8 +4,16 @@ import React from "react";
 export const Cards = () => {
   return (
     <Box sx={{ mb: 20 }}>
-      <Box sx={{ display: "flex" }}>
-        <Typography variant="h3">Balance</Typography>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          mb: 4,
+        }}
+      >
+        <Typography variant="h4" sx={{ fontWeight: 700, flexGrow: 1 }}>
+          Balance
+        </Typography>
         <Typography variant="h5">$50,000</Typography>
       </Box>
       <Box>
