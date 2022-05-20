@@ -10,8 +10,8 @@ import React from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { styled } from "@mui/material/styles";
 import NotificationsNoneSharpIcon from "@mui/icons-material/NotificationsNoneSharp";
-import Avatar from "@mui/material/Avatar";
-import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
+// import Avatar from "@mui/material/Avatar";
+// import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import MuiAppBar from "@mui/material/AppBar";
 import MailIcon from "@mui/icons-material/Mail";
 // import { useSelector } from "react-redux";
@@ -46,7 +46,7 @@ const AppBar = styled(MuiAppBar, {
 
 export const Navbar = ({ setAuth, open, setOpen }) => {
   // const { user } = useSelector((state) => state.authReducer);
-  const { user } = "useSelector((state) => state.authReducer)";
+  // const { user } = "useSelector((state) => state.authReducer)";
   const ch = window.location.pathname;
 
   const handleDrawerOpen = () => {
