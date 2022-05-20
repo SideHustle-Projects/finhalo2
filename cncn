@@ -1,0 +1,36 @@
+{
+    "clients":[
+                {
+                    "id": 1,
+                    "fullname": "88790 White Summit",
+                    "email": "Cristina Trail",
+                    "phone": "427",
+                    "gender": "81044",
+                    "image":"http:\/\/placeimg.com\/640\/480\/people"
+                },
+                {
+                    "id": 2,
+                    "fullname": "958 Grady Burgs Suite 760",
+                    "email": "Niko Plain",
+                    "phone": "8981",
+                    "gender": "Priceton",
+                    "image":"http:\/\/placeimg.com\/640\/480\/people"
+                },
+                {
+                    "id": 3,
+                    "fullname": "527 Ena Stravenue Apt. 008",
+                    "email": "Prohaska Point",
+                    "phone": "37538",
+                    "gender": "Lake Cleora",
+                    "image":"http:\/\/placeimg.com\/640\/480\/people"
+                },
+                {
+                    "id": 4,
+                    "fullname": "33146 Dayne Mountains",
+                    "email": "Ward Glens",
+                    "phone": "8079",
+                    "gender": "West Johnathonfort",
+                    "image":"http:\/\/placeimg.com\/640\/480\/people"
+                }
+    ]
+}
